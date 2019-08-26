@@ -20,10 +20,10 @@ func main() {
 			os.Exit(exitCode)
 		}
 
-		alias := append(aliasFromConfigs(checkoutAliasConfigs), checkout)
+		targets := append(aliasFromConfigs(checkoutAliasConfigs), checkout)
 
 		subCommand := os.Args[1]
-		if matchSubCommand(subCommand, alias) {
+		if matchSubCommand(subCommand, targets) {
 			fmt.Fprintf(os.Stderr, "Error: Use git switch or git restore instead of git checkout\n\n")
 			os.Exit(1)
 		}
