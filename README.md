@@ -3,7 +3,7 @@ git-switch-trainer
 
 ## Description
 
-You are forced to use git switch by `git-switch-trainer`.
+You are forced to use git switch and git restore instead of git checkout by `git-switch-trainer`.
 
 ## Getting Started
 
