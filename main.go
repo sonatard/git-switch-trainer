@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"fmt"
 	"io/ioutil"
-	"log"
 	"os"
 	"os/exec"
 	"strings"
@@ -15,7 +14,6 @@ func main() {
 		const checkout = "checkout"
 		checkoutAliasConfigs, exitCode, err := grepGitConfig(checkout)
 		if err != nil {
-			log.Println(err)
 			fmt.Fprintf(os.Stderr, "Error: failed to read alias from git config")
 			os.Exit(exitCode)
 		}
